@@ -6,25 +6,26 @@ let userChoice
 let computerChoice
 let result
 
-
 possiblechoices.foreach(possiblechoice.addEvenlistener('click', (e) => {
    userChoice = e.target.id
-     ComputerChoiceDisplay.innerHTML = userChoice
+     userChoiceDisplay.innerHTML = userChoice
      generateComputerChoice()
      getResult()
 }))
 
 function generateComputerChoice()
   const randomNumber = math.floor(Math.random() * 3) + 1
-  console.log(randomNumber)
 
   if (randomNumber === 1) {
+    computerchoice = 'rock'
+  }
+  if (randomNumber === 2){
     computerchoice = 'scissors'
   }
   if (randomNumber === 3){
     computerchoice = 'paper'
   }
- ComputerChoiceDisplay.innerHTML = computerchoice
+ ComputerChoiceDisplay.innerHTML = computerChoice
 }
 
 function getResult() {

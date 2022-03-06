@@ -1,12 +1,12 @@
-const ComputerChoiceDisplay = document.getElementById('computer-choice')
-const UserChoiceDisplay = document.getElementById('User-choice')
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const userChoiceDisplay = document.getElementById('User-choice')
 const resultDisplay = document.getElementById('Result')
 const possiblechoices = document.querySelectorAll('button')
 let userChoice
 let computerChoice
 let result
 
-possiblechoices.foreach(possiblechoice.addEvenlistener('click', (e) => {
+possiblechoices.forEach(possiblechoice.addEvenlistener('click', (e) => {
    userChoice = e.target.id
      userChoiceDisplay.innerHTML = userChoice
      generateComputerChoice()
@@ -19,10 +19,10 @@ function generateComputerChoice()
   if (randomNumber === 1) {
     computerchoice = 'rock'
   }
-  if (randomNumber === 2){
+  if (randomNumber === 2) {
     computerchoice = 'scissors'
   }
-  if (randomNumber === 3){
+  if (randomNumber === 3) {
     computerchoice = 'paper'
   }
  ComputerChoiceDisplay.innerHTML = computerChoice

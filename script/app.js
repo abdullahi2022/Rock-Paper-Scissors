@@ -6,7 +6,7 @@ let userChoice
 let computerChoice
 let result
 
-possiblechoices.forEach(possiblechoice.addEvenlistener('click', (e) => {
+possiblechoices.forEach(possiblechoice.addEventlistener('click', (e) => {
    userChoice = e.target.id
      userChoiceDisplay.innerHTML = userChoice
      generateComputerChoice()

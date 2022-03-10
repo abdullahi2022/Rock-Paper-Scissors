@@ -17,38 +17,38 @@ function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3) + 1 // or you can use possibleChoices.length
 
   if (randomNumber === 1) {
-    computerChoice = 'rock'
+    computerChoice = <h3>'rock'</h3>
   }
   if (randomNumber === 2) {
-    computerChoice = 'scissors'
+    computerChoice = <h3>'scissors'</h3>
   }
   if (randomNumber === 3) {
-    computerChoice = 'paper'
+    computerChoice = <h3>'paper'</h3>
   }
   computerChoiceDisplay.innerHTML = computerChoice
 }
 
 function getResult() {
   if (computerChoice === userChoice) {
-    result = 'its a draw!'
+    result = <h3>'its a draw!'</h3>
   }
   if (computerChoice === 'rock' && userChoice === "paper") {
-    result = 'you win!'
+    result = <h3>'you win!'</h3>
   }
   if (computerChoice === 'rock' && userChoice === "scissors") {
-    result = 'you lost!'
+    result = <h3>'you lost!'</h3>
   }
   if (computerChoice === 'paper' && userChoice === "scissors") {
-    result = 'you win!'
+    result = <h3>'you win!'</h3>
   }
   if (computerChoice === 'paper' && userChoice === "rock") {
-    result = 'you lose!'
+    result = <h3>'you lose!'</h3>
   }
   if (computerChoice === 'scissors' && userChoice === "rock") {
-    result = 'you win!'
+    result = <h3>'you win!'</h3>
   }
   if (computerChoice === 'scissors' && userChoice === "paper") {
-    result = 'you lose!'
+    result = <h3>'you lose!'</h3>
   }
   resultDisplay.innerHTML = result
 }
